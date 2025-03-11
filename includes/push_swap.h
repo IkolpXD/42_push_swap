@@ -6,7 +6,7 @@
 /*   By: made-jes <made-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:42:09 by made-jes          #+#    #+#             */
-/*   Updated: 2025/03/11 19:02:41 by made-jes         ###   ########.fr       */
+/*   Updated: 2025/03/11 19:52:09 by made-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ t_stack	*ft_lst_new(int n);
 int		ft_stack_size(t_stack *stack);
 t_stack	*max_value(t_stack *stack);
 t_stack	*min_value(t_stack *stack);
-void	push_smaller_to_b(t_stack **a, t_stack **b);
 void	move_to_top(t_stack **stack, t_stack *node, char stack_name);
 void	current_index(t_stack *stack);
 void	set_cheapest(t_stack *stack);

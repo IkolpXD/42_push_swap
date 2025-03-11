@@ -59,7 +59,10 @@ void	sort_three(t_stack **a)
 void	sort_4_5(t_stack **a, t_stack **b)
 {
 	while (ft_stack_size(*a) > 3)
-		push_smaller_to_b(a, b);
+	{
+		move_to_top(a, min_value(*a), 'a');
+		ft_pb(b, a, 1);
+	}
 	sort_three(a);
 	while (*b)
 		ft_pa(a, b, 1);
