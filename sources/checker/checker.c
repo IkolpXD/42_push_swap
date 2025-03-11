@@ -42,7 +42,7 @@ void	init_stack(t_stack **a, int ac, char **av)
 	args = get_args(ac, av);
 	if (!args)
 		exit(1);
-	validate_args(args);
+	validate_args(ac, args);
 	create_stack_a(a, args);
 	if (ac == 2)
 		free_args(args);
