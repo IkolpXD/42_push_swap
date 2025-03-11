@@ -6,7 +6,7 @@
 /*   By: made-jes <made-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:41:32 by made-jes          #+#    #+#             */
-/*   Updated: 2025/03/08 17:12:29 by made-jes         ###   ########.fr       */
+/*   Updated: 2025/03/11 19:04:23 by made-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,13 @@ void	error_exit(void)
 {
 	ft_putstr_fd("Error\n", 2);
 	exit(EXIT_FAILURE);
+}
+
+void	push_smaller_to_b(t_stack **a, t_stack **b)
+{
+	t_stack	*smallest;
+
+	smallest = min_value(*a);
+	move_to_top(a, smallest, 'a');
+	ft_pb(b, a, 1);
 }

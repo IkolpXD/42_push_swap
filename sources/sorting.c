@@ -65,15 +65,6 @@ void	sort_4_5(t_stack **a, t_stack **b)
 		ft_pa(a, b, 1);
 }
 
-void	push_smaller_to_b(t_stack **a, t_stack **b)
-{
-	t_stack	*smallest;
-
-	smallest = min_value(*a);
-	move_to_top(a, smallest, 'a');
-	ft_pb(b, a, 1);
-}
-
 void	sort_stacks(t_stack **a, t_stack **b)
 {
 	ft_pb(b, a, 1);
