@@ -37,6 +37,8 @@ void	sort_based_on_size(t_stack **a, t_stack **b)
 		ft_sa(a, 1);
 	else if (size == 3)
 		sort_three(a);
+	else if (size == 4 || size == 5)
+		sort_4_5(a, b);
 	else
 		sort_stacks(a, b);
 }
@@ -52,6 +54,24 @@ void	sort_three(t_stack **a)
 		ft_rra(a, 1);
 	if ((*a)->value > (*a)->next->value)
 		ft_sa(a, 1);
+}
+
+void	sort_4_5(t_stack **a, t_stack **b)
+{
+	while (ft_stack_size(*a) > 3)
+		push_smaller_to_b(a, b);
+	sort_three(a);
+	while (*b)
+		ft_pa(a, b, 1);
+}
+
+void	push_smaller_to_b(t_stack **a, t_stack **b)
+{
+	t_stack	*smallest;
+
+	smallest = min_value(*a);
+	move_to_top(a, smallest, 'a');
+	ft_pb(b, a, 1);
 }
 
 void	sort_stacks(t_stack **a, t_stack **b)

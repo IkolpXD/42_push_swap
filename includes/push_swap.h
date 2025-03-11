@@ -6,7 +6,7 @@
 /*   By: made-jes <made-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:42:09 by made-jes          #+#    #+#             */
-/*   Updated: 2025/03/08 16:52:18 by made-jes         ###   ########.fr       */
+/*   Updated: 2025/03/11 18:47:55 by made-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,8 @@ void	sort_stacks(t_stack **a, t_stack **b);
 void	init_stack(t_stack **a, int ac, char **av);
 void	check_operations(t_stack **a, t_stack **b, char *line);
 void	exec_operations(t_stack **a, t_stack **b, char *line);
+
+void	push_smaller_to_b(t_stack **a, t_stack **b);
+void	sort_4_5(t_stack **a, t_stack **b);
 
 #endif
